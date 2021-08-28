@@ -1,0 +1,10 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit" class="btn" style="background-color: deepskyblue">Register</button>
+    </form>
+    If you have already registered then <a href="/webapp/login"><strong>login</strong></a>, instead !
+{% endblock %}
